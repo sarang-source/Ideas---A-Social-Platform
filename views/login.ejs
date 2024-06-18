@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In | IDEAS</title>
+    <link
+      rel="shortcut icon"
+      href="/logo/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta&family=Nunito&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- navigation bar starts -->
+    <header>
+      <nav>
+        <div class="nav_bar">
+          <div class="log_name">
+            <img
+                src="/logo/ideas-high-resolution-logo-transparent (1).png"
+                alt="This is logo"
+              />
+            <!-- <p class="name">Swastik</p> -->
+          </div>
+          <div class="dropdown">
+            <a href="/" target="_parent"><p>Home</p></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navigation bar ends -->
+    <section class="home">
+      <!-- whole container -->
+      <div class="login_box">
+        <div class="overlay-left">
+          <h3>Welcome to IDEAS !</h3>
+          <p>
+            Enter the details to log in and Get connected to a new world of
+            sharing and interaction.
+          </p>
+          <p>or</p>
+            <button class="signup-button">
+              <a href="/signup">Sign Up</a>
+            </button>
+        </div>
+        <div class="login_form">
+          <form action="/login" method="post">
+            <h2>Log In</h2>
+            <input type="email" name="email" value="<%= locals.email %>" placeholder="Email" />
+            <input type="password" name="password" id="psw" placeholder="Password" />
+            <p class="error"> <%= locals.message %> </p>
+            <input type="submit" value="Login" id="loginbtn" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed | IDEAS</title>
+    <link
+      rel="shortcut icon"
+      href="logo/swastik-website-favicon---color.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta&family=Nunito&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="feed.css" />
+  </head>
+  <body>
+    <!-- ----navigation bar starts here--- -->
+    <header id="header">
+      <nav id="nav">
+        <div id="nav_bar">
+          <div class="log_name">
+            <img
+              src="logo/swastik-high-resolution-logo-color-on-transparent-background.png"
+              alt="This is logo"
+            />
+          </div>
+          <div class="srch">
+            <input type="text" placeholder="Search.." />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ----navigation bar ends here---- -->
+    <section id="intro">
+      <div class="intro-h">
+      <h1>Welcome to IDEAS!</h1>
+      <h3>Explore the world of ...</h3>
+      </div>
+      <form action="/logout" method="get">
+        <button type="submit" class="logout-btn">Logout</button>
+      </form>
+    </section>
+
+    <section id="home">
+        <!-- <label> -->
+        <label for="checkbox">
+          <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+          </div>
+        </label>
+        <input class="checkbox" id="checkbox" type="checkbox" />
+        <div class="slide">
+          <ul>
+            <li><a href=""></a></li>
+            <li><a href="">Communities</a></li>
+            <li><a href="">Friends</a></li>
+            <li><a href="">Topics</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="">Log Out</a></li>
+            <li><a href="">Support</a></li>
+          </ul>
+        </div>
+        <div class="left"></div>
+      <div class="main">
+        <div class="top">
+          <div class="create_post">
+            <label for="post_container">
+              <h3>Create Your Post...</h3>
+              <textarea
+                id="post_container"
+                placeholder="Share to World..."
+              ></textarea>
+            </label>
+          </div>
+        </div>
+        <hr />
+
+        <div id="post"> <!--Post Section-->
+          <!-- -----Post Containers----- -->
+          <div class="o-post-container">
+            <div class="o-user">
+              <img src="/resources/user.png" alt="user image">
+              <div class="o-user-name-date">
+                <p class="o-user-name">User 1</p>
+                <p class="o-user-date">Posted 2 Hrs ago</p>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+
+          <div class="o-post-container">
+            <div class="o-user">
+              <img src="/resources/user.png" alt="user image">
+              <div class="o-user-name-date">
+                <p class="o-user-name">User 1</p>
+                <p class="o-user-date">Posted 2 Hrs ago</p>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+
+          <div class="o-post-container">
+            <div class="o-user">
+              <img src="/resources/user.png" alt="user image">
+              <div class="o-user-name-date">
+                <p class="o-user-name">User 1</p>
+                <p class="o-user-date">Posted 2 Hrs ago</p>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+
+      </div>
+      <div class="right">
+        <div id="right-communities">
+          <div id="top-communities" class="communities">
+            <h3>Communities</h3>
+            <hr>
+            <ul class="communities-list">
+              <li><a href="">Community 1</a></li>
+              <li><a href="">Community 2</a></li>
+              <li><a href="">Community 3</a></li>
+            </ul>
+          </div>
+          <div id="your-communities" class="communities">
+            <h3>Your Communities</h3>
+            <hr>
+            <ul class="communities-list">
+              <li><a href="">Community 1</a></li>
+              <li><a href="">Community 2</a></li>
+              <li><a href="">Community 3</a></li>
+              <li><a href="">Community 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

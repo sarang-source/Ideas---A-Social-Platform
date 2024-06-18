@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | <%= locals.first_name %></title>
+    <link
+      rel="shortcut icon"
+      href="/logo/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta&family=Nunito&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<body>
+    <%- include('nav.ejs') %>
+    <section>
+        <div id="home">
+            <div class="title">
+                <img src="/resources/user.png" alt="user_image">
+                <p><%= `${locals.first_name}  ${locals.last_name}` %></p>
+            </div>
+            <hr>
+            <div class="main">
+                <div class="name-section main-item">
+                    <p>Edit your name</p>
+                    <form action="/profile/name" method="post">
+                        <input type="text" name="first_name" placeholder="First Name"
+                        value="<%= locals.first_name %>" id="name-field"/>
+                        <input type="text" name="last_name" placeholder="Last Name" value ="<%= locals.last_name %>"/>
+                        <p class="alert"><%= locals.alert %></p>
+                        <button type="submit" class="btn-submit">Save</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="dob-section main-item">
+                    <p>Date of Birth</p>
+                    <p class ="variable"><%= locals.dob %></p>
+                </div>
+                <hr>
+                <div class="gender-section main-item">
+                    <p>Gender</p>
+                    <form action="/profile/gender" method="post">
+                        <select name="gender" class="gender" title="Gender">
+                            <option value selected><%= locals.gender %></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <p class="alert"><%= locals.gender_alert%></p>
+                        <button type="submit" class="btn-submit">Save</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="email-section main-item">
+                    <p>Email address</p>
+                    <p class ="variable"><%= locals.email %></p>
+                </div>
+                <hr>
+                <div class="password-section main-item">
+                    <p>Change your password</p>
+                    <form action="/profile/password" method="post">
+                        <p class="pass">Old Password:</p> <input type="password" name="password" placeholder="Enter old password"/>
+                        <p class="pass">New Password:</p> <input type="password" name="newpassword" placeholder="Enter new password">
+                        <p class="variable"><%= locals.pass_alert %></p>
+                        <button type="submit" class="btn-submit">Save</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <form action="/feedup" class="form-link">
+                <button class="btn-link">Go back</button>
+            </form>
+            <form action="/" class="form-link">
+                <button class="btn-link">Home</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

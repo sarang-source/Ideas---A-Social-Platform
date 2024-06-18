@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | IDEAS</title>
+    <link
+      rel="shortcut icon"
+      href="/logo/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta&family=Nunito&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/feedup.css" />
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+</head>
+<body>
+    <%- include('nav') %>
+      <section id="intro">
+        <div class="intro-h">
+        <h1>Welcome to IDEAS!</h1>
+        <h3>Explore the world of ...</h3>
+        </div>
+        <form action="feedup/logout" method="get">
+          <button type="submit" class="logout-btn">Logout</button>
+        </form>
+      </section>
+
+      <section id="home">
+        <div class="profile-section">
+          <div class="profile-sec-title">
+            <img src="/resources/user.png" alt="">
+            <p><%= `${locals.first_name} ${locals.last_name}` %></p>
+          </div>
+          <hr>
+          <ul>
+            <li><a href="/profile">Edit Profile</a></li>
+            <li><a href="/feedup/logout">Logout</a></li>
+            <li><a href="/contact">Support</a></li>
+          </ul>
+        </div>
+        <div class="message-container">
+          <div class="container"></div> 
+          <div class="send">
+          <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp" autocomplete="off" placeholder="Enter your message here....">
+            <button class="btn" type="submit">Send</button>
+          </form>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

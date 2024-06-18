@@ -1,0 +1,212 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    /* outline: solid 2px red; */
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  
+  /* root */
+  :root{
+    --scrollbar-track-bgcolor: #fff;
+    --scrollbar-width: 8px;
+    --scrollbar-track-margin: 3px 0px;
+      --scrollbar-thumb-bgcolor: rgba(128, 128, 128, 0.653);
+      --scrollbar-thumb-border: 1.5px solid #fff;
+      --scrollbar-thumb-bdrradii: 10px;
+  }
+  
+  /* scrollbars */
+  
+  *::-webkit-scrollbar{
+    width: var(--scrollbar-width);
+    /* background-color: transparent; */
+  }
+  
+  *::-webkit-scrollbar-track{
+      background-color: var(--scrollbar-track-bgcolor);
+      margin: var(--scrollbar-track-margin);
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  }
+  
+  *::-webkit-scrollbar-thumb{
+      background-color:var(--scrollbar-thumb-bgcolor);
+      border: var(--scrollbar-thumb-border);
+      border-radius: var(--scrollbar-thumb-bdrradii);
+  }
+  
+  
+  body {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #fff; */
+    background-color: #FFFAFA;
+
+  }
+  
+
+  /* -----navigation bar starts----- */
+  #header {
+    /* background-color: rgb(54 38 141 / 35%); */
+    background-color: rgb(63 50 187 / 65%);
+  }
+  nav {
+    box-shadow: 0px 7px 10px 0px rgba(64, 50, 187, 0.291);
+  }
+  #nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 4%;
+    padding: 10px 20px;
+    z-index: 5000;
+  }
+  .log_name {
+    width: 7.5vmax;
+    padding: 8px 0;
+  }
+  .log_name > img {
+    filter: invert(93%) sepia(100%) saturate(3%) hue-rotate(175deg) brightness(103%) contrast(100%);
+    background-color: transparent;
+    border-radius: 2px;
+    width: 100%;
+  }
+  .srch > input {
+    height: 30px;
+    width: 20vmax;
+    border: 1.5px solid rgba(128, 128, 128, 0.439);
+    border-radius: 20px;
+  }
+  .srch > input[placeholder] {
+    padding: 0px 10px;
+  }
+  .srch > input:focus {
+    outline: none;
+  }
+  /* ---navigation bar ends--- */
+
+  /* ---------------- */
+
+  /* ----home section starts----- */
+
+  section{
+    /* padding: 1px; */
+    display: flex;
+    justify-content: center;
+  }
+  #home{
+    width: 90%;
+    height: 100%;
+    /* background-color: #F5FEFD; */
+    /* margin: 10px; */
+    padding: 2% 3% 1% 3%;
+  }
+
+  /* ----title section---- */
+  .title{
+    font-family: "Nunito";
+    margin-bottom: 10px;
+  }
+  .title>img{
+    height: 14px;
+    background-color: white;
+    width: 16px;
+    margin-right: 3px;
+  }
+  .title p{
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: "Nunito";
+  }
+
+  /* -----main section---- */
+  .main{
+    font-family: "Nunito";
+    margin: 10px 0 10px 10px ;
+  }
+  .main-item{
+      /* background-color: aliceblue; */
+      padding: 1% 0 3% 0;
+    }
+    div+hr{
+      margin: 5px 0px;
+      background-color: #333;
+      height: 1px;
+    }
+    .alert{
+      display: inline;
+      margin: 0 5px;
+      color: red;
+    }
+  .variable{
+    margin: 1% 0 0 2%;
+    font-weight: 500;
+    font-family: "Nunito";
+  }
+  .btn-submit{
+    margin: 0px 2%;
+    color: white;
+    outline: none;
+    border: 1px solid rgb(63 50 187 / 65%);
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 3px 10px;
+    cursor: pointer;
+    background-color: rgb(63 50 187 / 65%);
+    transition: all 0.25s;
+  }
+  .btn-submit:hover{
+    color: black;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  p+form>input, p+form select{
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-bottom: 1px solid #333;
+    min-width: 10%;
+    width: 20%;
+    max-width: 30%;
+    padding: 5px 6px;
+    /* height: 12px; */
+    margin: 1.5% 1% 0 1%;
+    font-size: 0.9em;
+    
+  }
+  p+form>input:focus, p+form select:focus{
+    outline: none;
+}
+.pass{
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.form-link{
+  display: inline;
+}
+.btn-link{
+  margin: 1% 2%;
+  color: white;
+  outline: none;
+  border: 1px solid rgb(63 50 187 / 65%);
+  font-size: 15px;
+  border-radius: 2px;
+  padding: 7px 14px;
+  cursor: pointer;
+  background-color: rgb(63 50 187 / 65%);
+  transition: all 0.25s;
+}
+.btn-link:hover{
+    color: black;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+
+  /* -----name section----- */
